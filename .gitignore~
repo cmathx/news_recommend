@@ -1,0 +1,8 @@
+#ignore these files
+*.txt
+*.csv
+code/data/*
+code/R/*
+code/recommend/*
+code/result/*
+
