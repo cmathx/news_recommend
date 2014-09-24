@@ -4,23 +4,18 @@
 import re
 import ConfigParser
 
-def sortByTime(train_set):
-    fp_data = open('data/train_data.map.txt', 'r')
+def sortByTime(train_set_file):
+    fp_data = open(train_set_file, 'r')
     data_list = []
     for line in fp_data:
-        element = line.split('\t')
-        user_id = int(element[0])
-        news_id = int(element[1])
-        time = int(element[2])
-        title = element[3]
-        content = element[4]
-        publish_time = element[5]
-        t_list = (user_id, news_id, time, title, content, publish_time)
-        data_list.append(t_list)
+        ele = line.split('\t')
+        #user_id, news_id, view_time, publish_time, title, content
+        ll = [int(ele[0]), int(ele[1]), ele[2], ele[3], ele[4], ele[5]]
+        data_list.append(ll)
     data_list.sort(key = lambda d: (d[0], d[2]), reverse = True)
-    fp_total_set = open('data/train_data.sort.txt', 'w')
+    fp_total_set = open('../data/train_data.sort.txt', 'w')
     for item in data_list:
-        fp_total_set.write('%d\t%d\t%d\t%s\t%s\t%s' %(int(item[0]), int(item[1]), int(item[2]), \
+        fp_total_set.write('%d\t%d\t%s\t%s\t%s\t%s' %(int(item[0]), int(item[1]), item[2], \
                                                      item[3], item[4], item[5]))
 
 def dataPreprocess(train_set):
@@ -94,7 +89,7 @@ def printNewsReadCountInfo(user_read_count_map, news_been_read_count_map):
         newsBeenReadCountInfo.write(formatter %(news_been_read_info[0], news_been_read_info[1]))
 
 if __name__ == '__main__':
-    train_set_file = 'data/train_data.edit.txt'
+    train_set_file = '../data/train_data.modify.final.txt'
     sortByTime(train_set_file)
     train_set_file = 'data/train_data.sort.txt'
     user_id_map, user_count, news_id_map, news_count, user_read_count_map, news_been_read_count_map = \

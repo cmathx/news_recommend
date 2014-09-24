@@ -24,76 +24,95 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="DataPreprocess.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
+        <entry file="file://$PROJECT_DIR$/cjw/DataPreprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2320">
+            <state line="75" column="36" selection-start="3187" selection-end="3193" vertical-scroll-proportion="-4.827586" vertical-offset="1636" max-vertical-offset="2472">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="computeF1.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/computeF1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="20" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoveContent.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/RemoveContent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="4" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding>
-                <element signature="e#52#61#0" expanded="true" />
-                <element signature="e#2357#3218#0" expanded="false" />
-                <element signature="e#3299#4152#0" expanded="false" />
+                <marker date="1411521297150" expanded="true" signature="81:389" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecommendResultDecode.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
+      <file leaf-file-name="SplitData.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/SplitData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="841">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotNewRecommend.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplitData.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SplitData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="17" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.6397059" vertical-offset="1189" max-vertical-offset="1624">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news_popular.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news_popular.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="24" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0" vertical-offset="2298" max-vertical-offset="3393">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDMap.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDMap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
+            <state line="20" column="3" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1248">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CFInitRateArrayCompute.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
+        <entry file="file://$PROJECT_DIR$/cjw/CFInitRateArrayCompute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1914">
+            <state line="43" column="25" selection-start="1724" selection-end="1727" vertical-scroll-proportion="-4.827586" vertical-offset="892" max-vertical-offset="1584">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileFormatDecode.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
+      <file leaf-file-name="UserItemRatingCompute.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/UserItemRatingCompute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
+            <state line="21" column="14" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1128">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_popular.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/news_popular.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="8" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="2808">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="7788.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/7788.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="984">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollaborativeFilteringAlg.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cjw/CollaborativeFilteringAlg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="237" column="0" selection-start="8079" selection-end="8079" vertical-scroll-proportion="0.6097561" vertical-offset="4023" max-vertical-offset="4392">
+              <folding>
+                <element signature="e#3323#4130#0" expanded="false" />
+                <element signature="e#6657#7554#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileFormatDecode.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cjw/FileFormatDecode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="456">
               <folding />
             </state>
           </provider>
@@ -121,6 +140,16 @@
         <option value="$PROJECT_DIR$/HotNewRecommend.py" />
         <option value="$PROJECT_DIR$/DataPreprocess.py" />
         <option value="$PROJECT_DIR$/SplitData.py" />
+        <option value="$PROJECT_DIR$/cjw/FileFormatDecode.py" />
+        <option value="$PROJECT_DIR$/cjw/DataFormatModify.py" />
+        <option value="$PROJECT_DIR$/cjw/DataPreprocess.py" />
+        <option value="$PROJECT_DIR$/cjw/SplitData.py" />
+        <option value="$PROJECT_DIR$/cjw/HotNews.py" />
+        <option value="$PROJECT_DIR$/cjw/computeF1.py" />
+        <option value="$PROJECT_DIR$/cjw/RemoveContent.py" />
+        <option value="$PROJECT_DIR$/cjw/7788.py" />
+        <option value="$PROJECT_DIR$/cjw/UserItemRatingCompute.py" />
+        <option value="$PROJECT_DIR$/cjw/CollaborativeFilteringAlg.py" />
       </list>
     </option>
   </component>
@@ -129,6 +158,22 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -175,6 +220,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cjw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -188,6 +247,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -201,38 +261,74 @@
       <recent name="E:\计划-实践\CCF\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SplitData">
-    <configuration default="false" name="news_popular" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CollaborativeFilteringAlg">
+    <configuration default="false" name="7788" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cjw" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/news_popular.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cjw/7788.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="dataPreprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="computeF1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cjw" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPreprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cjw/computeF1.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RemoveContent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cjw" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cjw/RemoveContent.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CollaborativeFilteringAlg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cjw" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cjw/CollaborativeFilteringAlg.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -240,39 +336,19 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="HotNewRecommend" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="UserItemRatingCompute" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cjw" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HotNewRecommend.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SplitData" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SplitData.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cjw/UserItemRatingCompute.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -417,19 +493,21 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.DataPreprocess" />
-      <item index="1" class="java.lang.String" itemvalue="Python.news_popular" />
-      <item index="2" class="java.lang.String" itemvalue="Python.dataPreprocess" />
-      <item index="3" class="java.lang.String" itemvalue="Python.HotNewRecommend" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SplitData" />
+      <item index="1" class="java.lang.String" itemvalue="Python.7788" />
+      <item index="2" class="java.lang.String" itemvalue="Python.computeF1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.RemoveContent" />
+      <item index="4" class="java.lang.String" itemvalue="Python.CollaborativeFilteringAlg" />
+      <item index="5" class="java.lang.String" itemvalue="Python.UserItemRatingCompute" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.SplitData" />
-        <item index="1" class="java.lang.String" itemvalue="Python.news_popular" />
-        <item index="2" class="java.lang.String" itemvalue="Python.HotNewRecommend" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dataPreprocess" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.CollaborativeFilteringAlg" />
+        <item index="1" class="java.lang.String" itemvalue="Python.UserItemRatingCompute" />
+        <item index="2" class="java.lang.String" itemvalue="Python.7788" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RemoveContent" />
+        <item index="4" class="java.lang.String" itemvalue="Python.computeF1" />
       </list>
     </recent_temporary>
   </component>
@@ -444,17 +522,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16105418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35433072" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18448023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47086614" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27401575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33543307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,329 +584,81 @@
           <line>50</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/cjw/HotNews.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/cjw/HotNews.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/cjw/CollaborativeFilteringAlg.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="28" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
+    <entry file="file://$PROJECT_DIR$/cjw/DataPreprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
+        <state line="16" column="3" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2496">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
+    <entry file="file://$PROJECT_DIR$/cjw/DataFormatModify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1914">
+        <state line="81" column="71" selection-start="2791" selection-end="2791" vertical-scroll-proportion="0.0" vertical-offset="1659" max-vertical-offset="3096">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
+    <entry file="file://$PROJECT_DIR$/cjw/HotNews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
+        <state line="59" column="42" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0" vertical-offset="1416" max-vertical-offset="1608">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
+    <entry file="file://$PROJECT_DIR$/cjw/SplitData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="69" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2552">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="841">
+        <state line="43" column="46" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1248">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
+    <entry file="file://$PROJECT_DIR$/cjw/CFInitRateArrayCompute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1584">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SplitData.py">
+    <entry file="file://$PROJECT_DIR$/cjw/news_popular.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1102">
+        <state line="30" column="8" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="2808">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
+    <entry file="file://$PROJECT_DIR$/cjw/7788.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
+        <state line="11" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="408">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
+    <entry file="file://$PROJECT_DIR$/cjw/FileFormatDecode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="69" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2552">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SplitData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="928">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="69" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0" vertical-offset="1798" max-vertical-offset="2552">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SplitData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="25" selection-start="3399" selection-end="3399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2552">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="609">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2407">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2407">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="11" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2001">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="80" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0" vertical-offset="957" max-vertical-offset="1131">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.0" vertical-offset="957" max-vertical-offset="1537">
-          <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="551">
+        <state line="5" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="456">
           <folding />
         </state>
       </provider>
@@ -843,63 +673,104 @@
         <state line="511" column="0" selection-start="18325" selection-end="18325" vertical-scroll-proportion="0.82670456" vertical-offset="14528" max-vertical-offset="22011" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CFInitRateArrayCompute.py">
+    <entry file="file://$PROJECT_DIR$/cjw/news_popular.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1914">
+        <state line="30" column="8" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="3393">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendResultDecode.py">
+    <entry file="file://$PROJECT_DIR$/cjw/FileFormatDecode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="841">
+        <state line="5" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDMap.py">
+    <entry file="file://$PROJECT_DIR$/data/demo.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="609">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480168">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotNewRecommend.py">
+    <entry file="file://$PROJECT_DIR$/data/total_set.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/SplitData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="957">
+        <state line="20" column="3" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1248">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileFormatDecode.py">
+    <entry file="file://$PROJECT_DIR$/cjw/HotNews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+        <state line="50" column="20" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="1656">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news_popular.py">
+    <entry file="file://$PROJECT_DIR$/cjw/RemoveContent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="24" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.0" vertical-offset="2298" max-vertical-offset="3393">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2320">
+        <state line="9" column="4" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <folding>
-            <element signature="e#52#61#0" expanded="true" />
-            <element signature="e#2357#3218#0" expanded="false" />
-            <element signature="e#3299#4152#0" expanded="false" />
+            <marker date="1411521297150" expanded="true" signature="81:389" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SplitData.py">
+    <entry file="file://$PROJECT_DIR$/cjw/7788.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="17" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.6397059" vertical-offset="1189" max-vertical-offset="1624">
+        <state line="3" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="984">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/computeF1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="20" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/CFInitRateArrayCompute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="25" selection-start="1724" selection-end="1727" vertical-scroll-proportion="-4.827586" vertical-offset="892" max-vertical-offset="1584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/DataFormatModify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="13" selection-start="2826" selection-end="2830" vertical-scroll-proportion="0.17102137" vertical-offset="1920" max-vertical-offset="3072">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/DataPreprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="36" selection-start="3187" selection-end="3193" vertical-scroll-proportion="-4.827586" vertical-offset="1636" max-vertical-offset="2472">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/UserItemRatingCompute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/CollaborativeFilteringAlg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="0" selection-start="8079" selection-end="8079" vertical-scroll-proportion="0.6097561" vertical-offset="4023" max-vertical-offset="4392">
+          <folding>
+            <element signature="e#3323#4130#0" expanded="false" />
+            <element signature="e#6657#7554#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
