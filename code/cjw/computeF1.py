@@ -36,9 +36,14 @@ def computeF1(recommend_file, test_set_file):
                 break
     precision = 1.0 * hits / recommend_num
     recall = 1.0 * hits / 10000
-    return precision, recall, 2.0 * precision * recall / (precision + recall)
+    return recommend_num, precision, recall, 2.0 * precision * recall / (precision + recall)
 
 if __name__ == '__main__':
-    recommend_file = '../recommend/hot_news_recommend.csv'
+    recommend_file = '../recommend/UCFRecommend.csv'
     test_set_file = '../data/test_set.txt'
-    print computeF1(recommend_file, test_set_file)
+    recommend_num, precision, recall, F1= computeF1(recommend_file, test_set_file)
+    print 'recommend number = ', recommend_num
+    print 'hits = ', int(1.0 * recommend_num * precision)
+    print 'precision = ', precision
+    print 'recall = ', recall
+    print 'F1 =', F1

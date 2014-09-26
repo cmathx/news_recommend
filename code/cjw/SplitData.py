@@ -3,7 +3,7 @@
 
 #输入数据格式转换后以及缺失数据处理完的数据，输出用户浏览的新闻以及最后一条浏览的新闻
 def splitData():
-    fp_data = open('../data/total_set.txt', 'r')
+    fp_data = open('../data/train_set.txt', 'r')
     data_list = []
     for line in fp_data:
         ele = line.split('\t')

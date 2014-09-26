@@ -8,8 +8,8 @@ class News:
         news_id = _news_id
         news_click_count = _news_click_count
 
-def hotNewsCount():
-    fp_total_set = open('../data/train_set.txt', 'r')
+def newsInfoCount(set_file):
+    fp_total_set = open(set_file, 'r')
     publish_time_news_dict = {}
     news_click_dict = {}
     for line in fp_total_set:
@@ -21,14 +21,12 @@ def hotNewsCount():
             news_click_dict[news_id] = 1
         else:
             news_click_dict[news_id] += 1
-        news = News(news_id, news_click_dict[news_id])
         if publish_time_news_dict.has_key(publish_time) == False:
             t_dict = {}
             t_dict[news_id] = news_click_dict[news_id]
             publish_time_news_dict[publish_time] = t_dict
         else:
-            t_dict = publish_time_news_dict[publish_time]
-            t_dict[news_id] = news_click_dict[news_id]
+            publish_time_news_dict[publish_time][news_id] = news_click_dict[news_id]
     for item in publish_time_news_dict:
         sorted(publish_time_news_dict[item].iteritems(), key = lambda d : d[1], reverse=True)
     # total_count = 0
@@ -59,6 +57,7 @@ def hotNewsRecommend(test_set_file, publish_time_news_dict):
                 break
 
 if __name__ == '__main__':
-   publish_time_news_dict = hotNewsCount()
+   set_file = '../data/train_set.txt'
+   publish_time_news_dict = newsInfoCount(set_file)
    test_set_file = '../data/test_set_sort_by_publish_time1.txt'
    hotNewsRecommend(test_set_file, publish_time_news_dict)
