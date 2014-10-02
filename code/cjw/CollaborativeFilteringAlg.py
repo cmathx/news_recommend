@@ -7,27 +7,6 @@ from datetime import *
 TOTAL_SET_FILE = '../data/train_set.txt'#替换
 TEST_SET_FILE = '../data/test_set1.txt'#替换
 
-
-#SampleSet with movies
-movies = {'Marcel Caraciolo': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
-                               'Just My Luck': 3.0, 'Superman Returns': 3.5, 'You, Me and Dupree': 2.5,
-                               'The Night Listener': 3.0},
-          'Luciana Nunes': {'Lady in the Water': 3.0, 'Snakes on a Plane': 3.5,
-                            'Just My Luck': 1.5, 'Superman Returns': 5.0, 'The Night Listener': 3.0,
-                            'You, Me and Dupree': 3.5},
-          'Leopoldo Pires': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.0,
-                             'Superman Returns': 3.5, 'The Night Listener': 4.0},
-          'Lorena Abreu': {'Snakes on a Plane': 3.5, 'Just My Luck': 3.0,
-                           'The Night Listener': 4.5, 'Superman Returns': 4.0,
-                           'You, Me and Dupree': 2.5},
-          'Steve Gates': {'Lady in the Water': 3.0, 'Snakes on a Plane': 4.0,
-                          'Just My Luck': 2.0, 'Superman Returns': 3.0, 'The Night Listener': 3.0,
-                          'You, Me and Dupree': 2.0},
-          'Sheldom': {'Lady in the Water': 3.0, 'Snakes on a Plane': 4.0,
-                      'The Night Listener': 3.0, 'Superman Returns': 5.0, 'You, Me and Dupree': 3.5},
-          'Penny Frewman': {'Snakes on a Plane': 4.5, 'You, Me and Dupree': 1.0, 'Superman Returns': 4.0}}
-
-
 def loadDataset(path=""):
     """ To load the dataSet"
         Parameter: The folder where the data files are stored

@@ -1,9 +1,0 @@
-#ignore these files
-*.txt
-*.csv
-code/.idea/*
-code/data/*
-code/R/*
-code/recommend/*
-code/result/*
-
