@@ -72,7 +72,7 @@ def sigmoid(inx):
     return 3/(1.0+math.exp(inx))
 
 def get_recommend_list(user_id, user_news_dict, news_user_dict):
-    '''
+    '''get_recommend_list
     :param user_id: the one to predict
     :param user_news_dict: type dict, user_id=>news_id=>time
     :param news_user_dict: type dict, news_id=>user_id

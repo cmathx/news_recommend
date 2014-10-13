@@ -38,8 +38,8 @@ def computeF1(recommend_file, test_set_file):
     recall = 1.0 * hits / 10000
     return recommend_num, precision, recall, 2.0 * precision * recall / (precision + recall)
 
-if __name__ == '__main__':
-    recommend_file = '../recommend/UCFRecommend.csv'
+def printF1Info(recommend_file):
+
     test_set_file = '../data/test_set.txt'
     recommend_num, precision, recall, F1= computeF1(recommend_file, test_set_file)
     print 'recommend number = ', recommend_num
