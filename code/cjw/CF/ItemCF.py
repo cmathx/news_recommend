@@ -18,7 +18,7 @@ class ItemBasedCF:
             # user,item,score = line.strip().split(",")
             user, item, score = line.strip().split("\t")
             self.train.setdefault(user, {})
-            self.train[user][item] = 1#int(score)
+            self.train[user][item] = float(score)
         # self.test = dict()      #测试集
         # for line in open(self.test_file):
         #     user, item, score = line.strip().split(",")
@@ -49,15 +49,23 @@ class ItemBasedCF:
     #根据topic model计算结果读入文档的相似度
     def ItemSimilarityByTopicModel(self, sims_arr, v2r_doc_map):
         doc_size = len(sims_arr)
-        self.W = dict()
+        self.W1 = dict()
         for i in xrange(doc_size):
-            self.W.setdefault(v2r_doc_map[i], {})
             for j in xrange(doc_size):
-                self.W[v2r_doc_map[i]][v2r_doc_map[j]] = sims_arr[i][j]
+                if self.W[v2r_doc_map[i]].has_key(v2r_doc_map[j]) == True:
+                    self.W1.setdefault(v2r_doc_map[i], {})
+                    self.W1[v2r_doc_map[i]][v2r_doc_map[j]] = sims_arr[i][j]
         # return self.W
 
+    def FinalItemSimilarity(self, v2r_doc_map):
+        self.W_fin = dict()
+        for uu, ii_sim in self.W.items():
+            self.W_fin.setdefault(uu, {})
+            for ii, sim in ii_sim.items():
+                self.W_fin[uu].setdefault(ii, sim * self.W1[uu][ii])
+
     #给用户user推荐，前K个相关用户
-    def Recommend(self,user,K=3,N=10):
+    def Recommend(self,user,K=3,N=1):
         rank = dict()
         action_item = self.train[user]     #用户user产生过行为的item和评分
         for item,score in action_item.items():
@@ -104,7 +112,7 @@ def icfRecommend():
     #generate news list which viewed time is nearly closed to the final viewed time
     # nearly_news_for_final_time_by_specific_user_dict = getNearlyDayNews.generateNearlyNewsForFinalTimeBySpecificUserDict()
     print '基于item based进行推荐'
-    user_may_read_news = getAlreadyPublishNews()
+    user_may_read_news = {}#getAlreadyPublishNews()
     print '过滤新闻列表计算结束'
     itemBasedCF.printRecommendList(6183,1,user_set, user_may_read_news)
 

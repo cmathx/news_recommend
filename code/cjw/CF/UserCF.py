@@ -55,7 +55,7 @@ class UserBasedCF:
     def Recommend(self,user,K=3,N=10):
         rank = dict()
         action_item = self.train[user].keys()     #用户user产生过行为的item
-        for v,wuv in self.W[user].items():#sorted(self.W[user].items(),key=lambda x:x[1],reverse=True)[0:K]:
+        for v,wuv in sorted(self.W[user].items(),key=lambda x:x[1],reverse=True)[0:K]:#self.W[user].items():
             #遍历前K个与user最相关的用户
             for i,rvi in self.train[v].items():
                 if i in action_item:
@@ -102,7 +102,7 @@ def ucfRecommend():
     #generate news list which viewed time is nearly closed to the final viewed time
     nearly_news_for_final_time_by_specific_user_dict = getNearlyDayNews.generateNearlyNewsForFinalTimeBySpecificUserDict()
     print '基于user based进行推荐'
-    userBasedCF.printRecommendList(9999,2,user_set, nearly_news_for_final_time_by_specific_user_dict)
+    userBasedCF.printRecommendList(1000,1,user_set, nearly_news_for_final_time_by_specific_user_dict)
 
 if __name__ == '__main__':
     ucfRecommend()
