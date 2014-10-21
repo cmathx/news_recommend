@@ -23,10 +23,10 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
     fp_total_set = open(total_set_file, 'r')
     if is_write_need_file == False:
         fp_doc_set = open(doc_set_file, 'w')
-        fp_doc_map1 = open('data//doc_map1.csv', 'w')
-        fp_doc_map2 = open('data//doc_map2.csv', 'w')
-        fp_doc_click_count = open('data//doc_click_count.csv', 'w')
-        fp_user_doc_click_count = open('data//user_doc_click_count.csv', 'w')
+        fp_doc_map1 = open('../PLSA/data/doc_map1.csv', 'w')
+        fp_doc_map2 = open('../PLSA/data/doc_map2.csv', 'w')
+        fp_doc_click_count = open('../PLSA/data/doc_click_count.csv', 'w')
+        fp_user_doc_click_count = open('../PLSA/data/user_doc_click_count.csv', 'w')
     cnt = 0
     pynlpir.open()
     for line in fp_total_set:
@@ -44,10 +44,10 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
             doc_map2[cnt] = word[1]
             cnt += 1
             if is_write_need_file == False:
-                # title_split_result = pynlpir.nlpir.ParagraphProcess(word[4], True)
+                title_split_result = pynlpir.nlpir.ParagraphProcess(word[4], True)
                 content_split_result = pynlpir.nlpir.ParagraphProcess(word[5], True)
                 #make sure that news id map is true
-                fp_doc_set.write('%s\t%s' %(word[1], content_split_result))#, content_split_result))
+                fp_doc_set.write('%s\t%s\t%s\n' %(word[1], title_split_result, content_split_result))#, content_split_result))
 
     # doc_map = sorted(doc_map1.items(), key=lambda d:d[1], reverse=False)
     if is_write_need_file == False:
@@ -116,7 +116,7 @@ def computeUserItemScoreAndRecommend(user_set, doc_set, doc_map1, doc_click_coun
         cluster_click_count.setdefault(clu, 0)
         cluster_click_count[clu] += cnt
 
-    fp_recommend = open('E://Plan-Action//CCF//news_recommend//code//recommend//plsa_recommend.csv', 'w')
+    fp_recommend = open('../../../code/recommend/plsa_recommend.csv', 'w')
     fp_recommend.write('userid,newsid\n')
     starttime = datetime.datetime.now()
     print 'start to recommend'
@@ -154,7 +154,7 @@ def computeUserItemScoreAndRecommend(user_set, doc_set, doc_map1, doc_click_coun
 
 
 if __name__ == '__main__':
-    total_set_file = 'E://Plan-Action//CCF//news_recommend//code//data//total_set.txt'
+    total_set_file = '../../data/total_set.txt'
     doc_set_file = 'data//document.csv'
     user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count = createDocMapAndClickInfo(total_set_file, doc_set_file)
 

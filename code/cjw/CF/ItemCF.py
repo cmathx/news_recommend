@@ -1,8 +1,8 @@
 # __author__ = 'cjweffort'
 # -*- coding: utf-8 -*-
 import math
-import Rate
-from cjw.AlreadyPublishNews import *
+# import Rate
+# from cjw.AlreadyPublishNews import *
 from cjw.PLSA.plsaRecommend import *
 
 class ItemBasedCF:
@@ -43,7 +43,7 @@ class ItemBasedCF:
         for i,related_items in C.items():
             self.W.setdefault(i,{})
             for j,cij in related_items.items():
-                self.W[i][j] = cij / (math.sqrt(N[i] * N[j]))
+                self.W[i][j] = cij / (math.sqrt(N[i] * N[j]))#(N[i] + N[j] - cij)
         return self.W
 
     #根据topic model计算结果读入文档的相似度
@@ -69,7 +69,7 @@ class ItemBasedCF:
         rank = dict()
         action_item = self.train[user]     #用户user产生过行为的item和评分
         for item,score in action_item.items():
-            for j,wj in self.W[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True):#[0:K]:
+            for j,wj in self.W1[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True):#[0:K]:
                 if j in action_item.keys():
                     continue
                 rank.setdefault(j,0)

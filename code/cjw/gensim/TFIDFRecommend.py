@@ -14,7 +14,7 @@ print '准备工作'
 logging.basicConfig(format=' %(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 print '建立doc映射表'
-doc_set_file = 'data/document.csv'
+doc_set_file = '../PLSA/data/document.csv'
 total_set_file = '../../data/total_set.txt'
 user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count = \
     createDocMapAndClickInfo(total_set_file, doc_set_file)
@@ -28,12 +28,45 @@ print '中文分词提取开始！'
 print '中文分词'
 corpus = plsaForNewsCluster.Corpus()
 original_texts = []
+title_no_key_word = 0
+content_no_key_word = 0
 for line in fp_doc_set:
     ele = line.split('\t')
-    document = plsaForNewsCluster.Document("", ele[1])  #prepare words which has been segmented
-    document.split()
+    document = plsaForNewsCluster.Document(ele[1], ele[2])  #prepare words which has been segmented
+    title_tag, content_tag = document.split()
+    if title_tag == False:
+        title_no_key_word += 1
+    if content_no_key_word == False:
+        content_no_key_word += 1
     corpus.add_document(document)
-    original_texts.append(document.content_words)
+    original_texts.append(document.title_words)
+print '标题没有提取出关键字有%d个' %title_no_key_word
+print '正文没有提取出关键字有%d个' %content_no_key_word
+
+fp_title_set = open('/tmp/title.csv', 'w')
+fp_content_set = open('/tmp/content.csv', 'w')
+for doc in corpus.documents:
+    tag = True
+    for word in doc.getTitleKeyWords():
+        if tag == True:
+            tag = False
+        else:
+            fp_title_set.write('\t')
+        fp_title_set.write('%s' %word)
+    fp_title_set.write('\n')
+    # fp_title_set.write(str(unicode(doc.getTitleKeyWords(), 'gbk')) + '\n')
+for doc in corpus.documents:
+    tag = True
+    for word in doc.getContentKeyWords():
+        if tag == True:
+            tag = False
+        else:
+            fp_content_set.write('\t')
+        fp_content_set.write('%s' %word)
+    fp_content_set.write('\n')
+    # fp_title_set.write(str(unicode(doc.getContentKeyWords(), 'gbk')) + '\n')
+fp_title_set.close()
+fp_content_set.close()
 
 LOW_FREQUENCE = 50
 print '去掉在预料库中出现次数小于等于LOW_FREQUENCE的低频词'
@@ -92,6 +125,8 @@ lda = models.LdaModel(corpus_tfidf, id2word=dictionary, num_topics=topic_num)
 lda.print_topics(topic_num)
 print '基于LDA模型计算文档和主题的相关性'
 corpus_lda = lda[corpus_tfidf]
+
+
 # fp_lda_doc_pro = open('data/lda_doc_probability.csv', 'w')
 # cnt = 0
 # for doc in corpus_lda:
@@ -106,7 +141,7 @@ corpus_lda = lda[corpus_tfidf]
 # print 'cnt = ', cnt
 
 print '建立索引'
-index = similarities.MatrixSimilarity(lda[corpus])
+index = similarities.MatrixSimilarity(lda[corpus_tfidf])
 
 
 length = len(texts)

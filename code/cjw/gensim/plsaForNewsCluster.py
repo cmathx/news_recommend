@@ -19,6 +19,7 @@ np.set_printoptions(threshold='nan')
 
 
 def split(paragraph):
+    tag = True
     words = []
     # print paragraph
     count = 0
@@ -29,14 +30,15 @@ def split(paragraph):
         if len(word) >= 2 and len(word[1]) > 0 and len(word[0]) >= 4:
             #only consider Noun, v, adj etc. and the length of this word must be greater than 1
             cc = word[1][0]
-            if cc == 'n' or cc == 's' or cc == 'f'\
-                or cc == 'v' or cc == 'a' or cc == 'b' or cc == 'z'\
-                or cc == 'r' or cc == 'd':
+            if cc == 'n':# or cc == 's' or cc == 'f'\
+                # or cc == 'v' or cc == 'a' or cc == 'b' or cc == 'z'\
+                # or cc == 'r' or cc == 'd':
                 words.append(word[0])
                 count += 1
     if count == 0:
-        print '没有关键词被提取出来！'
-    return words
+        tag = False
+    #     print '没有关键词被提取出来！'
+    return words, tag
 
 class Document(object):
 
@@ -75,8 +77,15 @@ class Document(object):
         lowercase everything; preserve contractions; disallow strings that
         include non-letters.
         '''
-        # self.title_words = split(self.title)
-        self.content_words = split(self.content)
+        self.title_words, title_tag = split(self.title)
+        self.content_words, content_tag = split(self.content)
+        return title_tag, content_tag
+
+    def getTitleKeyWords(self):
+        return self.title_words
+
+    def getContentKeyWords(self):
+        return self.content_words
 
 class Corpus(object):
 
