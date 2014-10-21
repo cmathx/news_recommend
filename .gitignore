@@ -1,7 +1,6 @@
 #ignore these files
 *.txt
 *.csv
-code/cjw/bakeup/*
 code/.idea/*
 code/data/*
 code/R/*
