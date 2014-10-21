@@ -1,9 +1,12 @@
 # __author__ = 'cjweffort'
 # -*- coding: utf-8 -*-
 import math
-# import Rate
+import Rate
 # from cjw.AlreadyPublishNews import *
 from cjw.PLSA.plsaRecommend import *
+from cjw.preprocess.UserViewTimeDistribute import *
+
+INTERVAL = 10
 
 class ItemBasedCF:
     def __init__(self,train_file,test_file):
@@ -69,33 +72,44 @@ class ItemBasedCF:
         rank = dict()
         action_item = self.train[user]     #用户user产生过行为的item和评分
         for item,score in action_item.items():
-            for j,wj in self.W1[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True):#[0:K]:
+            for j,wj in self.W[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True):#[0:K]:
                 if j in action_item.keys():
                     continue
                 rank.setdefault(j,0)
                 rank[j] += score * wj
-        return dict(sorted(rank.items(),key=lambda x:x[1],reverse=True)[0:N])
+        return dict(sorted(rank.items(),key=lambda x:x[1],reverse=True))
 
-    def filter(self, ori_rec_dict, user, user_may_read_news,N):
+    def filter(self, ori_rec_dict, user, user_may_read_news, N, doc_publish_time, user_view_time):
         fin_rec = dict()
         cnt = 0
-        for news, score in ori_rec_dict.items():
-            if cnt == N:
-                break
-            if news in user_may_read_news[user]:
+        need_filter = False
+        if len(user_view_time[user]) <= 1:
+            need_filter = True
+        if need_filter == False:
+            for news, score in ori_rec_dict.items():
+                if cnt == N:
+                    break
                 fin_rec[news] = score
                 cnt += 1
+        else:
+            for news, score in ori_rec_dict.items():
+                if cnt == N:
+                    break
+                news_publish_time = doc_publish_time[news]
+                if timeInterval(user_view_time[user][0][0], news_publish_time) <= INTERVAL:
+                    fin_rec[news] = score
+                    cnt += 1
         return fin_rec
 
-    def printRecommendList(self,K=9999,N=2,user_set={}, user_may_read_news={}):
+    def printRecommendList(self,K=9999,N=2,user_set={}, user_may_read_news={}, doc_publish_time={}, user_view_time={}):
         fp_recommend_set = open('../../recommend/itemBasedRecomemnd.csv', 'w')
         fp_recommend_set.write('userid,newsid\n')
         for user_id in user_set:
             recommend_news = self.Recommend(user_id, K, N)
             # print recommend_news
-            # fin_recommend_news = self.filter(recommend_news, user_id, user_may_read_news, N)
+            fin_recommend_news = self.filter(recommend_news, user_id, user_may_read_news, N, doc_publish_time, user_view_time)
             # print fin_recommend_news
-            for recommend_news_id in recommend_news:
+            for recommend_news_id in fin_recommend_news:
                 fp_recommend_set.write('%s,%s\n' %(user_id, recommend_news_id))
 
 def icfRecommend():
@@ -104,6 +118,7 @@ def icfRecommend():
     total_set_file = '../../data/total_set.txt'
     user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count = \
     createDocMapAndClickInfo(total_set_file, doc_set_file)
+    doc_publish_time, user_view_time = userViewTimeDistribute()
     print '计算初始评分矩阵'
     Rate.getUserItemRate()
     itemBasedCF = ItemBasedCF('../../data/user_item_rate.csv', '')
@@ -114,7 +129,7 @@ def icfRecommend():
     print '基于item based进行推荐'
     user_may_read_news = {}#getAlreadyPublishNews()
     print '过滤新闻列表计算结束'
-    itemBasedCF.printRecommendList(6183,1,user_set, user_may_read_news)
+    itemBasedCF.printRecommendList(6183,1,user_set, user_may_read_news, doc_publish_time, user_view_time)
 
 if __name__ == '__main__':
     icfRecommend()

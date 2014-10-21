@@ -47,7 +47,7 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
                 title_split_result = pynlpir.nlpir.ParagraphProcess(word[4], True)
                 content_split_result = pynlpir.nlpir.ParagraphProcess(word[5], True)
                 #make sure that news id map is true
-                fp_doc_set.write('%s\t%s\t%s\n' %(word[1], title_split_result, content_split_result))#, content_split_result))
+                fp_doc_set.write('%s\t%s\t%s' %(word[1], title_split_result, content_split_result))#, content_split_result))
 
     # doc_map = sorted(doc_map1.items(), key=lambda d:d[1], reverse=False)
     if is_write_need_file == False:

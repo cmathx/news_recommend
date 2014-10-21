@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from gensim import corpora, models, similarities
+# from gensim import corpora, models, similarities
 
 from cjw.CF.Rate import getUserItemRate
 from cjw.CF.ItemCF import ItemBasedCF
 from cjw.PLSA.plsaRecommend import createDocMapAndClickInfo
-import plsaForNewsCluster
+# import plsaForNewsCluster
 
 
 print '准备工作'
