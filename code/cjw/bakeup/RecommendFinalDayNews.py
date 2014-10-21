@@ -12,6 +12,16 @@ def countEveryDayPublishNews(total_set_file):
         publish_news_every_day[publish_time].append(news_id)
     return publish_news_every_day
 
+def getUserFinalViewTime(test_set_file):
+    user_final_wiew_time = {}
+    fp_test_set = open(test_set_file, 'r')
+    for line in fp_test_set:
+        tup = line.split('\t')
+        user_id = tup[0]
+        view_time = tup[2].split('-')[0]
+        user_final_wiew_time[user_id] = view_time
+    return user_final_wiew_time
+
 def recommendFinalDayNews(test_set_file, publush_news_every_day):
     fp_test_set = open(test_set_file, 'r')
     fp_recommend_final_day_news = open('../../recommend/final_day_news.csv', 'w')
