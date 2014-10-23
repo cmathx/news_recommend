@@ -9,8 +9,10 @@ import plsaForNewsCluster
 import getNearlyDayNews
 
 def createDocMapAndClickInfo(total_set_file, doc_set_file):
-    doc_map1 = {}  #doc map(Facilitate the calculation in PLSA)
-    doc_map2 = {}  #not use
+    user_map_r2v = {}
+    user_map_v2r = {}
+    doc_map_r2v = {}  #doc map(Facilitate the calculation in PLSA)
+    doc_map_v2r = {}  #not use
     user_set = set()  #total users
     doc_set = set()  #total documents
     doc_click_count = {}  #clicks in every document
@@ -23,11 +25,12 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
     fp_total_set = open(total_set_file, 'r')
     if is_write_need_file == False:
         fp_doc_set = open(doc_set_file, 'w')
-        fp_doc_map1 = open('../PLSA/data/doc_map1.csv', 'w')
-        fp_doc_map2 = open('../PLSA/data/doc_map2.csv', 'w')
+        fp_doc_map_r2v = open('../PLSA/data/doc_map_r2v.csv', 'w')
+        fp_doc_map_v2r = open('../PLSA/data/doc_map_v2r.csv', 'w')
         fp_doc_click_count = open('../PLSA/data/doc_click_count.csv', 'w')
         fp_user_doc_click_count = open('../PLSA/data/user_doc_click_count.csv', 'w')
     cnt = 0
+    cnt1 = 0
     pynlpir.open()
     for line in fp_total_set:
         word = line.split('\t')
@@ -39,9 +42,13 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
         if user_doc_click_count[word[0]].has_key(word[1]) == False:
             user_doc_click_count[word[0]][word[1]] = 0
         user_doc_click_count[word[0]][word[1]] += 1
-        if doc_map1.has_key(word[1]) == False:
-            doc_map1[word[1]] = cnt
-            doc_map2[cnt] = word[1]
+        if user_map_r2v.has_key(word[0]) == False:
+            user_map_r2v[word[0]] = cnt1
+            user_map_v2r[cnt1] = word[0]
+            cnt1 += 1
+        if doc_map_r2v.has_key(word[1]) == False:
+            doc_map_r2v[word[1]] = cnt
+            doc_map_v2r[cnt] = word[1]
             cnt += 1
             if is_write_need_file == False:
                 title_split_result = pynlpir.nlpir.ParagraphProcess(word[4], True)
@@ -49,12 +56,12 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
                 #make sure that news id map is true
                 fp_doc_set.write('%s\t%s\t%s' %(word[1], title_split_result, content_split_result))#, content_split_result))
 
-    # doc_map = sorted(doc_map1.items(), key=lambda d:d[1], reverse=False)
+    # doc_map = sorted(doc_map_r2v.items(), key=lambda d:d[1], reverse=False)
     if is_write_need_file == False:
-        for d, dtag in doc_map1.items():
-            fp_doc_map1.write('%s %d\n' %(d, dtag))
-        for dtag, d in doc_map2.items():
-            fp_doc_map2.write('%d %s\n' %(dtag, d))
+        for d, dtag in doc_map_r2v.items():
+            fp_doc_map_r2v.write('%s %d\n' %(d, dtag))
+        for dtag, d in doc_map_v2r.items():
+            fp_doc_map_v2r.write('%d %s\n' %(dtag, d))
         for d, dclicks in doc_click_count.items():
             fp_doc_click_count.write('%s %d\n' %(d, dclicks))
     user_clicks = 0
@@ -74,11 +81,11 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
 
     print 'createDocMap end'
     #user_set (real_user_id) doc_set(real_news_id)
-    #doc_map1 (real_news_id -> virtual_news_id)
-    #doc_map2 (virtual_news_id -> real_news_id)
+    #doc_map_r2v (real_news_id -> virtual_news_id)
+    #doc_map_v2r (virtual_news_id -> real_news_id)
     #doc_click_count (real_news_id -> clicks)
     #user_doc_click_count (real_user_id, real_news_id -> clicks)
-    return user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count
+    return user_set, doc_set, user_map_r2v, user_map_v2r, doc_map_r2v, doc_map_v2r, doc_click_count, user_doc_click_count
 
 # def splitNewsTitleAndContent(doc_set_file):
 #     fp_doc_set_file = open(doc_set_file, 'r')
