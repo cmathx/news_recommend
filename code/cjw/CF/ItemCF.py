@@ -9,7 +9,7 @@ from cjw.preprocess.UserViewTimeDistribute import *
 INTERVAL = 10
 
 class ItemBasedCF:
-    def __init__(self,train_file,test_file):
+    def __init__(self,train_file):
         self.train_file = train_file
         # self.test_file = test_file
         self.readData()
@@ -38,7 +38,7 @@ class ItemBasedCF:
                 N[i] += 1
                 C.setdefault(i,{})
                 for j in items.keys():
-                    if i == j : continue
+                    if i == j: continue
                     C[i].setdefault(j,0)
                     C[i][j] += 1
         #计算相似度矩阵
@@ -46,7 +46,7 @@ class ItemBasedCF:
         for i,related_items in C.items():
             self.W.setdefault(i,{})
             for j,cij in related_items.items():
-                self.W[i][j] = cij / (math.sqrt(N[i] * N[j]))#(N[i] + N[j] - cij)
+                self.W[i][j] = cij / (N[i] * N[j])#(N[i] + N[j] - cij)
         return self.W
 
     #根据topic model计算结果读入文档的相似度
@@ -72,12 +72,12 @@ class ItemBasedCF:
         rank = dict()
         action_item = self.train[user]     #用户user产生过行为的item和评分
         for item,score in action_item.items():
-            for j,wj in self.W[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True):#[0:K]:
+            for j,wj in sorted(self.W[item].items(),key=lambda x:x[1],reverse=True)[0:K]:
                 if j in action_item.keys():
                     continue
                 rank.setdefault(j,0)
                 rank[j] += score * wj
-        return dict(sorted(rank.items(),key=lambda x:x[1],reverse=True))
+        return len(rank), dict(sorted(rank.items(),key=lambda x:x[1],reverse=True)[0:N])
 
     def filter(self, ori_rec_dict, user, user_may_read_news, N, doc_publish_time, user_view_time):
         fin_rec = dict()
@@ -104,13 +104,16 @@ class ItemBasedCF:
     def printRecommendList(self,K=9999,N=2,user_set={}, user_may_read_news={}, doc_publish_time={}, user_view_time={}):
         fp_recommend_set = open('../../recommend/itemBasedRecomemnd.csv', 'w')
         fp_recommend_set.write('userid,newsid\n')
+        can_recommend_num = 0
         for user_id in user_set:
-            recommend_news = self.Recommend(user_id, K, N)
+            inc, recommend_news = self.Recommend(user_id, K, N)
+            can_recommend_num += inc
             # print recommend_news
-            fin_recommend_news = self.filter(recommend_news, user_id, user_may_read_news, N, doc_publish_time, user_view_time)
+            # fin_recommend_news = self.filter(recommend_news, user_id, user_may_read_news, N, doc_publish_time, user_view_time)
             # print fin_recommend_news
-            for recommend_news_id in fin_recommend_news:
+            for recommend_news_id in recommend_news:
                 fp_recommend_set.write('%s,%s\n' %(user_id, recommend_news_id))
+        print can_recommend_num
 
 def icfRecommend():
     print '建立doc映射表'
@@ -118,10 +121,11 @@ def icfRecommend():
     total_set_file = '../../data/total_set.txt'
     user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count = \
     createDocMapAndClickInfo(total_set_file, doc_set_file)
-    doc_publish_time, user_view_time = userViewTimeDistribute()
+    doc_publish_time = {}
+    user_view_time = {}#userViewTimeDistribute()
     print '计算初始评分矩阵'
     Rate.getUserItemRate()
-    itemBasedCF = ItemBasedCF('../../data/user_item_rate.csv', '')
+    itemBasedCF = ItemBasedCF('../../data/user_item_rate.csv')
     itemBasedCF.ItemSimilarity()
     print '生成最近的新闻列表'
     #generate news list which viewed time is nearly closed to the final viewed time
