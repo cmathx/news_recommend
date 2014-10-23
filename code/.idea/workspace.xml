@@ -84,7 +84,16 @@
       <file leaf-file-name="TFIDFRecommend.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/gensim/TFIDFRecommend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="15" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5655">
+            <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="5655">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plsa.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cjw/PLSA/myPLSA/plsa.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="43" selection-start="444" selection-end="444" vertical-scroll-proportion="0.6863905" vertical-offset="87" max-vertical-offset="2900">
               <folding />
             </state>
           </provider>
@@ -108,10 +117,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserViewTimeDistribute.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserViewTimeDistribute.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.7150685" vertical-offset="696" max-vertical-offset="2378">
+            <state line="57" column="37" selection-start="2553" selection-end="2553" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2291">
               <folding />
             </state>
           </provider>
@@ -120,7 +129,7 @@
       <file leaf-file-name="ItemCF.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="4060">
+            <state line="117" column="28" selection-start="4363" selection-end="4363" vertical-scroll-proportion="0.0" vertical-offset="3168" max-vertical-offset="4959">
               <folding>
                 <element signature="e#51#62#0" expanded="true" />
               </folding>
@@ -331,7 +340,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -362,7 +371,7 @@
       <recent name="E:\计划-实践\CCF\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ItemCF">
+  <component name="RunManager" selected="Python.UserViewTimeDistribute">
     <configuration default="false" name="gensim2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -722,8 +731,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ItemCF" />
-        <item index="1" class="java.lang.String" itemvalue="Python.UserViewTimeDistribute" />
+        <item index="0" class="java.lang.String" itemvalue="Python.UserViewTimeDistribute" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ItemCF" />
         <item index="2" class="java.lang.String" itemvalue="Python.DataFormatModify" />
         <item index="3" class="java.lang.String" itemvalue="Python.plsaRecommend" />
         <item index="4" class="java.lang.String" itemvalue="Python.gensim2" />
@@ -744,17 +753,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1855" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30253354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2777778" sideWeight="0.5005208" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23535353" sideWeight="0.49947917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.289899" sideWeight="0.49947917" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1078,11 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cjw/PLSA/myPLSA/plsa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/PLSA/myPLSA/RecommendToolkit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -1153,13 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cjw/gensim/TFIDFRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="15" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/bakeup/UserViewNewsTimeInterval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1450">
@@ -1190,7 +1187,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="4060">
+        <state line="117" column="28" selection-start="4363" selection-end="4363" vertical-scroll-proportion="0.0" vertical-offset="3168" max-vertical-offset="4959">
           <folding>
             <element signature="e#51#62#0" expanded="true" />
           </folding>
@@ -1199,7 +1196,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.7150685" vertical-offset="696" max-vertical-offset="2378">
+        <state line="57" column="37" selection-start="2553" selection-end="2553" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2291">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/gensim/TFIDFRecommend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="5655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/PLSA/myPLSA/plsa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="43" selection-start="444" selection-end="444" vertical-scroll-proportion="0.6863905" vertical-offset="87" max-vertical-offset="2900">
           <folding />
         </state>
       </provider>
