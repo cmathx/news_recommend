@@ -4,7 +4,7 @@ import math
 import Rate
 # from cjw.AlreadyPublishNews import *
 from cjw.PLSA.plsaRecommend import *
-from cjw.preprocess.UserViewTimeDistribute import *
+# from cjw.preprocess.UserViewTimeDistribute import *
 
 INTERVAL = 10
 

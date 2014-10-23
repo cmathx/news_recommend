@@ -55,7 +55,7 @@
       <file leaf-file-name="plsaRecommend.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="56" selection-start="3559" selection-end="3559" vertical-scroll-proportion="-16.11111" vertical-offset="1914" max-vertical-offset="5771">
+            <state line="10" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="-4.296296" vertical-offset="0" max-vertical-offset="5771">
               <folding />
             </state>
           </provider>
@@ -64,12 +64,12 @@
       <file leaf-file-name="ItemCF.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="12" selection-start="216" selection-end="216" vertical-scroll-proportion="-3.749221" vertical-offset="2610" max-vertical-offset="3451">
+            <state line="3" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.13551402" vertical-offset="0" max-vertical-offset="3480">
               <folding>
-                <element signature="e#438#1046#0" expanded="false" />
-                <element signature="e#1870#2228#0" expanded="false" />
-                <element signature="e#2285#2506#0" expanded="false" />
-                <element signature="e#3385#4090#0" expanded="false" />
+                <element signature="e#440#1048#0" expanded="false" />
+                <element signature="e#1872#2230#0" expanded="false" />
+                <element signature="e#2287#2508#0" expanded="false" />
+                <element signature="e#3387#4092#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py" />
         <option value="$PROJECT_DIR$/cjw/svd/SVD.py" />
         <option value="$PROJECT_DIR$/cjw/bakeup/7788.py" />
-        <option value="$PROJECT_DIR$/cjw/CF/ItemCF.py" />
         <option value="$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py" />
+        <option value="$PROJECT_DIR$/cjw/CF/ItemCF.py" />
       </list>
     </option>
   </component>
@@ -246,7 +246,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.UserViewTimeDistribute">
+  <component name="RunManager" selected="Python.ItemCF">
     <configuration default="false" name="SVD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -450,8 +450,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.UserViewTimeDistribute" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ItemCF" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ItemCF" />
+        <item index="1" class="java.lang.String" itemvalue="Python.UserViewTimeDistribute" />
         <item index="2" class="java.lang.String" itemvalue="Python.7788" />
         <item index="3" class="java.lang.String" itemvalue="Python.SVD" />
       </list>
@@ -543,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="56" selection-start="3559" selection-end="3559" vertical-scroll-proportion="-16.11111" vertical-offset="1914" max-vertical-offset="5771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/bakeup/7788.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="33" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0" vertical-offset="1348" max-vertical-offset="2581">
@@ -578,14 +571,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="-4.296296" vertical-offset="0" max-vertical-offset="5771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="216" selection-end="216" vertical-scroll-proportion="-3.749221" vertical-offset="2610" max-vertical-offset="3451">
+        <state line="3" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.13551402" vertical-offset="0" max-vertical-offset="3480">
           <folding>
-            <element signature="e#438#1046#0" expanded="false" />
-            <element signature="e#1870#2228#0" expanded="false" />
-            <element signature="e#2285#2506#0" expanded="false" />
-            <element signature="e#3385#4090#0" expanded="false" />
+            <element signature="e#440#1048#0" expanded="false" />
+            <element signature="e#1872#2230#0" expanded="false" />
+            <element signature="e#2287#2508#0" expanded="false" />
+            <element signature="e#3387#4092#0" expanded="false" />
           </folding>
         </state>
       </provider>
