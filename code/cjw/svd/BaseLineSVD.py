@@ -24,7 +24,7 @@ def load_data():
     for line in open(filename_train):
         (userId, itemId, rating) = line.strip().split('\t')
         train.setdefault(userId, {})
-        train[userId][itemId] = 1.0#float(rating)
+        train[userId][itemId] = float(rating)
 
     '''
     for line in open(filename_test):

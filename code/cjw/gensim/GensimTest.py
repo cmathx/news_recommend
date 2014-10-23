@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import math
+import numpy as np
+from numpy import *
 from gensim import corpora, models, similarities
 import logging
 
@@ -23,6 +25,8 @@ print dictionary.token2id
 print '用符串表示的文档转换用id表示的文档向量'
 corpus = [dictionary.doc2bow(text) for text in texts]
 print corpus, type(corpus)
+for doc in corpus:
+    print doc
 '''
 自己计算词频-逆文档频率：见代码最后面
 '''
@@ -32,13 +36,24 @@ tfidf = models.TfidfModel(corpus)
 print tfidf
 print '基于TF-IDF模型计算出TF-IDF矩阵'
 corpus_tfidf = tfidf[corpus]
+data = np.zeros([3,10], dtype=np.float)
+cnt = 0
 for doc in corpus_tfidf:
-    print doc, type(doc)
+    for tup in doc:
+        data[cnt, tup[0] - 1] = tup[1]
+    print doc
+    cnt += 1
+print data
+uu, sigma, vv = linalg.svd(data)
+print 'u = ', uu
+# print 'sigma = ', sigma
+# print 'v = ', vv
+
 print tfidf.dfs
 print tfidf.idfs
 
 print '训练LSI模型'
-lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=2)
+lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=3)
 lsi.print_topics(2)
 print '基于LSI模型计算文档和主题的相关性'
 corpus_lsi = lsi[corpus_tfidf]
@@ -53,9 +68,9 @@ for doc in corpus_lsi:
 # for doc in corpus_lda:
 #     print doc
 
-result = (0.67211468809878583 * 0.44124825208697871 - 0.54880682119356106 * 0.83594920480338963) / math.sqrt(0.67211468809878583 * 0.67211468809878583 + \
-    0.54880682119356106 * 0.54880682119356106) / math.sqrt(0.44124825208697871 * 0.44124825208697871 + 0.83594920480338963 * 0.83594920480338963)
-print result
+# result = (0.67211468809878583 * 0.44124825208697871 - 0.54880682119356106 * 0.83594920480338963) / math.sqrt(0.67211468809878583 * 0.67211468809878583 + \
+#     0.54880682119356106 * 0.54880682119356106) / math.sqrt(0.44124825208697871 * 0.44124825208697871 + 0.83594920480338963 * 0.83594920480338963)
+# print result
 
 print '建立索引'
 index = similarities.MatrixSimilarity(lsi[corpus_tfidf])

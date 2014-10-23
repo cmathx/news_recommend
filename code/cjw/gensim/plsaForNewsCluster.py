@@ -18,7 +18,7 @@ import logging
 np.set_printoptions(threshold='nan')
 
 
-def split(paragraph):
+def split(paragraph, is_title):
     tag = True
     words = []
     # print paragraph
@@ -27,14 +27,19 @@ def split(paragraph):
     for w in paragraph:
         # print w
         word = w.split('/')
-        if len(word) >= 2 and len(word[1]) > 0 and len(word[0]) >= 4:
+        if len(word) >= 2 and len(word[1]) > 0 and len(word[0]) >= 2:
             #only consider Noun, v, adj etc. and the length of this word must be greater than 1
             cc = word[1][0]
-            if cc == 'n':# or cc == 's' or cc == 'f'\
-                # or cc == 'v' or cc == 'a' or cc == 'b' or cc == 'z'\
-                # or cc == 'r' or cc == 'd':
-                words.append(word[0])
-                count += 1
+            if is_title:
+                if cc != 'w':
+                    words.append(word[0])
+                    count += 1
+            else:
+                if cc == 'n':# or cc == 's' or cc == 'f'\
+                    # or cc == 'v' or cc == 'a' or cc == 'b' or cc == 'z'\
+                    # or cc == 'r' or cc == 'd':
+                    words.append(word[0])
+                    count += 1
     if count == 0:
         tag = False
     #     print '没有关键词被提取出来！'
@@ -77,8 +82,8 @@ class Document(object):
         lowercase everything; preserve contractions; disallow strings that
         include non-letters.
         '''
-        self.title_words, title_tag = split(self.title)
-        self.content_words, content_tag = split(self.content)
+        self.title_words, title_tag = split(self.title, True)
+        self.content_words, content_tag = split(self.content, False)
         return title_tag, content_tag
 
     def getTitleKeyWords(self):
