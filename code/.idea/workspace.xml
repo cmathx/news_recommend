@@ -55,22 +55,8 @@
       <file leaf-file-name="plsaRecommend.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="-4.296296" vertical-offset="0" max-vertical-offset="5771">
+            <state line="90" column="100" selection-start="3716" selection-end="3716" vertical-scroll-proportion="0.0" vertical-offset="1827" max-vertical-offset="5858">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemCF.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.13551402" vertical-offset="0" max-vertical-offset="3480">
-              <folding>
-                <element signature="e#440#1048#0" expanded="false" />
-                <element signature="e#1872#2230#0" expanded="false" />
-                <element signature="e#2287#2508#0" expanded="false" />
-                <element signature="e#3387#4092#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -84,10 +70,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ItemCF.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="21" selection-start="3723" selection-end="3723" vertical-scroll-proportion="-1.4345795" vertical-offset="3705" max-vertical-offset="5307">
+              <folding>
+                <element signature="e#51#62#0" expanded="true" />
+                <element signature="e#3809#4514#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserViewTimeDistribute.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="42" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="1319" max-vertical-offset="2697">
+            <state line="50" column="37" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="2697">
               <folding />
             </state>
           </provider>
@@ -103,10 +101,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py" />
         <option value="$PROJECT_DIR$/cjw/svd/SVD.py" />
         <option value="$PROJECT_DIR$/cjw/bakeup/7788.py" />
         <option value="$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py" />
+        <option value="$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py" />
         <option value="$PROJECT_DIR$/cjw/CF/ItemCF.py" />
       </list>
     </option>
@@ -240,6 +238,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -557,6 +556,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="37" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="2697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/CF/UserCF.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="3219">
@@ -564,28 +570,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cjw/preprocess/UserViewTimeDistribute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="1319" max-vertical-offset="2697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cjw/PLSA/plsaRecommend.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="-4.296296" vertical-offset="0" max-vertical-offset="5771">
+        <state line="90" column="100" selection-start="3716" selection-end="3716" vertical-scroll-proportion="0.0" vertical-offset="1827" max-vertical-offset="5858">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cjw/CF/ItemCF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.13551402" vertical-offset="0" max-vertical-offset="3480">
+        <state line="96" column="21" selection-start="3723" selection-end="3723" vertical-scroll-proportion="-1.4345795" vertical-offset="3705" max-vertical-offset="5307">
           <folding>
-            <element signature="e#440#1048#0" expanded="false" />
-            <element signature="e#1872#2230#0" expanded="false" />
-            <element signature="e#2287#2508#0" expanded="false" />
-            <element signature="e#3387#4092#0" expanded="false" />
+            <element signature="e#51#62#0" expanded="true" />
+            <element signature="e#3809#4514#0" expanded="false" />
           </folding>
         </state>
       </provider>

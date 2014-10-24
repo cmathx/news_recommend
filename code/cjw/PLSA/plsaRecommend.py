@@ -15,6 +15,7 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
     doc_map_v2r = {}  #not use
     user_set = set()  #total users
     doc_set = set()  #total documents
+    user_click_count = {}
     doc_click_count = {}  #clicks in every document
     user_doc_click_count = {}  #clicks in specific document from specific user
 
@@ -38,6 +39,8 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
         doc_set.add(word[1])
         doc_click_count.setdefault(word[1], 0)
         doc_click_count[word[1]] += 1
+        user_click_count.setdefault(word[0], 0)
+        user_click_count[word[0]] += 1
         user_doc_click_count.setdefault(word[0], {})
         if user_doc_click_count[word[0]].has_key(word[1]) == False:
             user_doc_click_count[word[0]][word[1]] = 0
@@ -85,7 +88,7 @@ def createDocMapAndClickInfo(total_set_file, doc_set_file):
     #doc_map_v2r (virtual_news_id -> real_news_id)
     #doc_click_count (real_news_id -> clicks)
     #user_doc_click_count (real_user_id, real_news_id -> clicks)
-    return user_set, doc_set, user_map_r2v, user_map_v2r, doc_map_r2v, doc_map_v2r, doc_click_count, user_doc_click_count
+    return user_set, doc_set, user_map_r2v, user_map_v2r, doc_map_r2v, doc_map_v2r, user_click_count, doc_click_count, user_doc_click_count
 
 # def splitNewsTitleAndContent(doc_set_file):
 #     fp_doc_set_file = open(doc_set_file, 'r')

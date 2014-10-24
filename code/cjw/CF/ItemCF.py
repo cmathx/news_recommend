@@ -70,17 +70,28 @@ class ItemBasedCF:
     def Recommend(self,user,K=3,N=1,user_final_view_news={}):
         rank = dict()
         action_item = user_final_view_news[user]     #用户user产生过行为的item和评分
-        print len(user_final_view_news[user])
+        # print len(user_final_view_news[user])
         # if len(user_final_view_news[user]) = 1:
         #     self.recommend_members += 1
         #     return 0, dict()
+        print '以用户最后一条浏览的新闻为基准进行推荐'
+        item = action_item
+        score = self.train[user][item]
+        for j,wj in self.W[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True)[0:K]:
+            if j in self.train[user].keys():
+                continue
+            rank.setdefault(j,0)
+            rank[j] += score * wj
+        '''
+        print '以用户最后一天浏览的新闻为基准进行推荐'
         for item in action_item:
             score = self.train[user][item]
             for j,wj in self.W[item].items():#sorted(self.W[item].items(),key=lambda x:x[1],reverse=True)[0:K]:
-                if j in action_item.keys():
+                if j in self.train[user].keys():
                     continue
                 rank.setdefault(j,0)
                 rank[j] += score * wj
+                '''
         return len(rank), dict(sorted(rank.items(),key=lambda x:x[1],reverse=True)[0:N])
 
     def filter(self, ori_rec_dict, user, user_may_read_news, N, doc_publish_time, user_view_time):
@@ -105,11 +116,13 @@ class ItemBasedCF:
                     cnt += 1
         return fin_rec
 
-    def printRecommendList(self,K=9999,N=2,user_set={}, user_may_read_news={}, doc_publish_time={}, user_view_time={}, user_final_view_news={}):
+    def printRecommendList(self,K=9999,N=2,user_set={}, user_click_count={}, doc_publish_time={}, user_view_time={}, user_final_view_news={}):
         fp_recommend_set = open('../../recommend/itemBasedRecomemnd.csv', 'w')
         fp_recommend_set.write('userid,newsid\n')
         can_recommend_num = 0
         for user_id in user_set:
+            # if len(user_final_view_news[user_id]) == 1:
+            #     continue
             inc, recommend_news = self.Recommend(user_id, K, N, user_final_view_news)
             can_recommend_num += inc
             # print recommend_news
@@ -124,7 +137,7 @@ def icfRecommend():
     print '建立doc映射表'
     doc_set_file = '../../data/document.csv'
     total_set_file = '../../data/total_set.txt'
-    user_set, doc_set, user_map_r2v, user_map_v2r, doc_map1, doc_map2, doc_click_count, user_doc_click_count = \
+    user_set, doc_set, user_map_r2v, user_map_v2r, doc_map1, doc_map2, user_click_count, doc_click_count, user_doc_click_count = \
     createDocMapAndClickInfo(total_set_file, doc_set_file)
     doc_publish_time = {}
     user_view_time = {}#userViewTimeDistribute()
@@ -135,6 +148,18 @@ def icfRecommend():
     print '生成最近的新闻列表'
     #generate news list which viewed time is nearly closed to the final viewed time
     # nearly_news_for_final_time_by_specific_user_dict = getNearlyDayNews.generateNearlyNewsForFinalTimeBySpecificUserDict()
+    print '计算用户最后一条浏览的新闻'
+    user_final_view_news = dict()
+    user_final_view_time = dict()
+    fp_total_set = open('../../data/total_set.txt', 'r')
+    for line in fp_total_set:
+        tup = line.split('\t')
+        user_final_view_news.setdefault(tup[0], tup[1])
+        user_final_view_time.setdefault(tup[0], tup[2])
+        if tup[2] > user_final_view_time[tup[0]]:
+            user_final_view_news[tup[0]] = tup[1]
+    fp_total_set.close()
+    '''
     print '计算用户最后一天浏览的新闻列表'
     user_final_view_news = dict()
     user_final_view_time = dict()
@@ -152,10 +177,22 @@ def icfRecommend():
             user_final_view_news[tup[0]].setdefault(tup[1], 0)
     fp_test_set.close()
     fp_total_set.close()
+    '''
     print '基于item based进行推荐'
-    user_may_read_news = {}#getAlreadyPublishNews()
+    # user_may_read_news = {}#getAlreadyPublishNews()
     print '过滤新闻列表计算结束'
-    itemBasedCF.printRecommendList(6183,1,user_set, user_may_read_news, doc_publish_time, user_view_time, user_final_view_news)
+    itemBasedCF.printRecommendList(6183,1,user_set, user_click_count, doc_publish_time, user_view_time, user_final_view_news)
+    # user_final_view_news_num = dict()
+    # for user in user_final_view_news:
+    #     user_final_view_news_num.setdefault(user, len(user_final_view_news[user]))
+    # fp_final_view = open('../../data/final_view_info.csv', 'w')
+    # user_final_view_news_num = sorted(user_final_view_news_num.items(), key=lambda d:d[1], reverse=True)
+    # for tup in user_final_view_news_num:
+    #     fp_final_view.write('%s\t%s\t|:' %(tup[0], tup[1]))
+    #     # for user, view_news in user_final_view_news.items():
+    #     #     fp_final_view.write('[%s]\t' %view_news)
+    #     fp_final_view.write('\n')
+    # fp_final_view.close()
 
 if __name__ == '__main__':
     icfRecommend()
