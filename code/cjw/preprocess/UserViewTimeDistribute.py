@@ -1,6 +1,7 @@
 # __author__ = 'cjweffort'
 # -*- coding: utf-8 -*-
 import datetime
+from cjw.CF.FinalView import *
 
 def timeInterval(time1, time2):
     d1 = datetime.datetime(int(time1.split('/')[0]), int(time1.split('/')[1]), int(time1.split('/')[2]))
@@ -28,61 +29,61 @@ def userViewTimeDistribute(user_final_view_news):
         words = line.split('\t')
         view_time = words[2].split('-')[0]
         publish_time = words[3].split('-')[0]
+        #doc publish time
         doc_publish_time.setdefault(words[1], publish_time)
+        #user view news: view time and corresponding clicks
         user_view_time.setdefault(words[0], {})
         user_view_time[words[0]].setdefault(view_time, 0)
         user_view_time[words[0]][view_time] += 1
+        #user clicks
         user_clicks.setdefault(words[0], 0)
         user_clicks[words[0]] += 1
+        #user view news: publish time and corresponding clicks
         user_news_publish_time.setdefault(words[0], {})
         user_news_publish_time[words[0]].setdefault(publish_time, 0)
         user_news_publish_time[words[0]][publish_time] += 1
     fp_total_set.close()
-    # for user_clicks_tup in user_clicks:
-    #     user = user_clicks_tup[0]
+    return user_view_time
+
+
+    # cnt = 0
+    # INTERVAL = 6
+    # interval_cnt = 0
+    # # user_clicks = sorted(user_clicks.items(), key=lambda d:d[1], reverse=True)
+    # fp_user_view_time = open('../../data/user_view_time_unfocus.csv', 'w')
+    # fp_user_view_days = open('../../data/user_view_time_unfocus.days.csv', 'w')
+    # user_view_days = dict()
+    # for user in user_clicks:
+    #     user_view_days[user] = len(user_view_time[user])
+    # user_view_days = sorted(user_view_days.items(), key=lambda d:d[1], reverse=True)
+    # user_clicks = sorted(user_clicks.items(), key=lambda d:d[1], reverse=True)
+    # for tup in user_clicks:
+    #     user = tup[0]
     #     user_view_time[user] = sorted(user_view_time[user].items(), key=lambda d:d[0], reverse=False)
-    # return doc_publish_time, user_view_time
-    cnt = 0
-    cnt1 = 0
-    INTERVAL = 6
-    interval_cnt = 0
-    user_clicks = sorted(user_clicks.items(), key=lambda d:d[1], reverse=True)
-    fp_user_view_time = open('../../data/user_view_time.csv', 'w')
-    for user_clicks_tup in user_clicks:
-        user = user_clicks_tup[0]
-        user_view_time[user] = sorted(user_view_time[user].items(), key=lambda d:d[0], reverse=False)
-        user_news_publish_time[user] = sorted(user_news_publish_time[user].items(), key=lambda d:d[0], reverse=False)
-        if len(user_view_time[user]) <= 1:
-            cnt += 1
-        if len(user_view_time[user]) != 0:
-            if timeInterval(user_view_time[user][0][0], user_news_publish_time[user][0][0]) <= INTERVAL:
-                interval_cnt += 1
-            if len(user_final_view_news[user]) != 0:
-                print user, user_final_view_news[user]
-                fp_user_view_time.write('%s\t%s\t' %(user, user_clicks_tup[1]))
-                fp_user_view_time.write('|:\t')
-                for tup in user_view_time[user]:
-                    fp_user_view_time.write('[%s,%s]\t' %(tup[0], tup[1]))
-                fp_user_view_time.write('\n')
-    fp_user_view_time.close()
-    print 'cnt = ', cnt
-    print 'cnt1 = ', cnt1
-    print 'interval_cnt = ', interval_cnt
+    #     user_news_publish_time[user] = sorted(user_news_publish_time[user].items(), key=lambda d:d[0], reverse=False)
+    #     if len(user_view_time[user]) > 3:
+    #         cnt += 1
+    #     if len(user_view_time[user]) != 0:
+    #         # if timeInterval(user_view_time[user][0][0], user_news_publish_time[user][0][0]) <= INTERVAL:
+    #         #     interval_cnt += 1
+    #         if len(user_view_time[user]) > 3:
+    #             # print user, user_final_view_news[user]
+    #             fp_user_view_time.write('%s\t%s\t' %(user, tup[1]))
+    #             fp_user_view_time.write('|:\t')
+    #             for tup in user_view_time[user]:
+    #                 fp_user_view_time.write('[%s,%s]\t' %(tup[0], tup[1]))
+    #             fp_user_view_time.write('\n')
+    # fp_user_view_time.close()
+    #
+    # for tup in user_view_days:
+    #     fp_user_view_days.write('%s,%s\n' %(tup[0], tup[1]))
+    # print 'cnt = ', cnt
+    # print 'interval_cnt = ', interval_cnt
+
+
 
 if __name__ == '__main__':
     print '计算用户最后一天浏览的新闻列表'
-    user_final_view_news = dict()
-    user_final_view_time = dict()
-    fp_test_set = open('../../data/test_set.txt', 'r')
-    for line in fp_test_set:
-        tup = line.split('\t')
-        user_final_view_time.setdefault(tup[0], tup[2].split('-')[0])
-    fp_total_set = open('../../data/total_set.txt', 'r')
-    for line in fp_total_set:
-        tup = line.split('\t')
-        if tup[2].split('-')[0] == user_final_view_time[tup[0]]:
-            user_final_view_news.setdefault(tup[0], {})
-            user_final_view_news[tup[0]].setdefault(tup[1], 0)
-    fp_test_set.close()
-    fp_total_set.close()
-    userViewTimeDistribute(user_final_view_news)
+    user_final_view_news1 = getUserFinalDayViewNews()
+    user_view_time = userViewTimeDistribute(user_final_view_news1)
+    # print len([user for user in user_view_time if len(user_view_time[user]) <= 3])

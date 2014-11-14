@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 import math
 import Rate
+import FinalView
+from cjw.preprocess.UserViewTimeDistribute import *
 from cjw.PLSA.plsaRecommend import *
 
 class UserBasedCF:
@@ -55,7 +57,7 @@ class UserBasedCF:
     def Recommend(self,user,K=3,N=10):
         rank = dict()
         action_item = self.train[user].keys()     #用户user产生过行为的item
-        for v,wuv in sorted(self.W[user].items(),key=lambda x:x[1],reverse=True)[0:K]:#self.W[user].items():
+        for v,wuv in self.W[user].items():#sorted(self.W[user].items(),key=lambda x:x[1],reverse=True)[0:K]:#self.W[user].items():
             #遍历前K个与user最相关的用户
             for i,rvi in self.train[v].items():
                 if i in action_item:
@@ -76,23 +78,24 @@ class UserBasedCF:
                 cnt += 1
         return fin_rec
 
-    def printRecommendList(self,K=9999,N=2,user_set={}, nearly_news_for_final_time_by_specific_user_dict={}):
+    def printRecommendList(self,K=9999,N=2,user_set={}, nearly_news_for_final_time_by_specific_user_dict={},user_view_time={}):
         fp_recommend_set = open('../../recommend/usedBasedRecomemnd.csv', 'w')
         fp_recommend_set.write('userid,newsid\n')
         for user_id in user_set:
-            recommend_news = self.Recommend(user_id, K, N)
+            if len(user_view_time[user_id]) > 3:
+                recommend_news = self.Recommend(user_id, K, N)
             # print recommend_news
             # fin_recommend_news = self.filter(recommend_news, user_id, nearly_news_for_final_time_by_specific_user_dict, N)
             # print fin_recommend_news
-            for recommend_news_id in recommend_news:
-                fp_recommend_set.write('%s,%s\n' %(user_id, recommend_news_id))
+                for recommend_news_id in recommend_news:
+                    fp_recommend_set.write('%s,%s\n' %(user_id, recommend_news_id))
 
 
 def ucfRecommend():
     print '建立doc映射表'
     doc_set_file = '../../data/document.csv'
     total_set_file = '../../data/total_set.txt'
-    user_set, doc_set, doc_map1, doc_map2, doc_click_count, user_doc_click_count = \
+    user_set, doc_set, user_map_r2v, user_map_v2r, doc_map1, doc_map2, user_click_count, doc_click_count, user_doc_click_count = \
     createDocMapAndClickInfo(total_set_file, doc_set_file)
     print '计算初始评分矩阵'
     Rate.getUserItemRate()
@@ -100,9 +103,11 @@ def ucfRecommend():
     userBasedCF.UserSimilarity()
     print '生成最近的新闻列表'
     #generate news list which viewed time is nearly closed to the final viewed time
-    nearly_news_for_final_time_by_specific_user_dict = getNearlyDayNews.generateNearlyNewsForFinalTimeBySpecificUserDict()
+    nearly_news_for_final_time_by_specific_user_dict = {}#getNearlyDayNews.generateNearlyNewsForFinalTimeBySpecificUserDict()
     print '基于user based进行推荐'
-    userBasedCF.printRecommendList(1000,1,user_set, nearly_news_for_final_time_by_specific_user_dict)
+    user_final_view_news1 = FinalView.getUserFinalDayViewNews()
+    user_view_time = userViewTimeDistribute(user_final_view_news1)
+    userBasedCF.printRecommendList(1000,1,user_set, nearly_news_for_final_time_by_specific_user_dict, user_view_time)
 
 if __name__ == '__main__':
     ucfRecommend()
